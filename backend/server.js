@@ -1,11 +1,10 @@
-const express=require("express");
-const app=express();
+const express = require("express");
+const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Hello from Docker 🚀");
+});
 
-
-app.get("/",()=>{
-  console.log("hello from Docker");
-})
-app.listen(5000,()=>{
+app.listen(5000, "0.0.0.0", () => {
   console.log("server connected at port of 5000");
 });
